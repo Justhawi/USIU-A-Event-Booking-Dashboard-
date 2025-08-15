@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USIU-A Event Booking Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="download.png" alt="USIU-A Logo" class="logo">
+    <h1>Event Booking Dashboard</h1>
+</header>
+
+<main>
+    <!-- Event List Table -->
+    <section class="event-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Venue</th>
+                    <th>Slots Available</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cultural Night</td>
+                    <td>2025-08-25</td>
+                    <td>Auditorium</td>
+                    <td>5</td>
+                    <td><button class="register-btn">Register</button></td>
+                </tr>
+                <tr>
+                    <td>Career Fair</td>
+                    <td>2025-09-05</td>
+                    <td>Main Hall</td>
+                    <td>3</td>
+                    <td><button class="register-btn">Register</button></td>
+                </tr>
+                <tr>
+                    <td>Sports Day</td>
+                    <td>2025-09-15</td>
+                    <td>Sports Complex</td>
+                    <td>2</td>
+                    <td><button class="register-btn">Register</button></td>
+                </tr>
+                <tr>
+                    <td>Tech Expo</td>
+                    <td>2025-09-20</td>
+                    <td>Innovation Hub</td>
+                    <td>4</td>
+                    <td><button class="register-btn">Register</button></td>
+                </tr>
+                <tr>
+                    <td>Music Festival</td>
+                    <td>2025-09-30</td>
+                    <td>Open Grounds</td>
+                    <td>0</td>
+                    <td><button class="register-btn" disabled>Fully Booked</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="registration-form">
+        <h2>Register for an Event</h2>
+        <form id="registerForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="studentId">Student ID:</label>
+            <input type="text" id="studentId" placeholder="e.g., USIU1234" required>
+
+            <label for="eventSelect">Event:</label>
+            <select id="eventSelect" required>
+                <option value="">-- Select an Event --</option>
+                <option value="Cultural Night">Cultural Night</option>
+                <option value="Career Fair">Career Fair</option>
+                <option value="Sports Day">Sports Day</option>
+                <option value="Tech Expo">Tech Expo</option>
+                <!-- Music Festival excluded because fully booked -->
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="formMessage"></div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 USIU-Africa. All rights reserved.</p>
+    <div class="socials">
+        <a href="https://www.facebook.com/USIUAFRICA/">Facebook</a> | 
+        <a href="https://x.com/ExperienceUSIU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a> | 
+        <a href="https://www.instagram.com/usiuafrica/">Instagram</a>
+    </div>
+</footer>
+
+<script src="usiu.js"></script>
+</body>
+</html>
